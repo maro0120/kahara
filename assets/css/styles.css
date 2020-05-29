@@ -457,7 +457,7 @@ header nav li:last-child{
 
 @media screen and (max-width: 900px){
 	.cards__item {
-		width: 80%;
+		width: 100%;
 	}
 }
 
