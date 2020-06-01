@@ -13,6 +13,18 @@
 	<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/styles.css">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.min.js"></script>
+	<script>
+		(function(d) {
+			var config = {
+				kitId: 'vdy7ayo',
+				scriptTimeout: 3000,
+				async: true
+			},
+			h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
 </head>
 
 <body>
@@ -42,18 +54,63 @@
 		<div class="bg_open" id="bg_open_js"></div>
 	</header>
 
-
-	<section class="hero">
-		<div class="background-image" style="background-image: url(assets/img/slider-bg.jpg);"></div>
-		<h1><img src="./assets/img/logo.svg" alt=""></h1>
-		<h3>岡山県久米南町</h3>
-	</section>
+	<!-- <section> -->
+		<div class="main_imgBox">
+			<!-- <img class="main_logo" src="https://www.esz.co.jp/common/img/basis/tit_logo.svg" alt="SOL"> -->
+			<!-- <h1><img class="main_logo" src="./assets/img/logo.svg" alt=""></h1> -->
+					<div class="main_img" style="background-image: url(./assets/img/IMG_6756.jpg)"></div>
+					<div class="main_img" style="background-image: url(./assets/img/IMG_6759.jpg)"></div>
+					<div class="main_img" style="background-image: url(./assets/img/IMG_6761.jpg)"></div>
+					<div class="main_img" style="background-image: url(./assets/img/IMG_6788.jpg)"></div> 
+					<div class="main_img" style="background-image: url(./assets/img/IMG_6803.jpg)"></div>
+					<div class="main_img" style="background-image: url(./assets/img/IMG_6837.jpg)"></div>
+					<div class="titleWrap" id="content">
+						<p class="title">すべてのヒトに<br>
+						モノづくりのよろこびを</p>
+						<h1 class="subTitle">私たちは、ぶどう栽培を通じ、<br>
+							あらゆるヒトの生活を豊かにする会社です。</h1>
+					</div>
+		</div>
+		<!-- <div class="background-image" style="background-image: url(assets/img/slider-bg.jpg);"></div> -->
+		<!-- <h1><img src="./assets/img/logo.svg" alt=""></h1> -->
+		
+	<!-- </section> -->
 
 
 	<section class="our-work">
 		<h3 class="title">本物をあなたに</h3>
 		<hr>
 		<h4>岡山県久米南町で育った高品質なぶどうを届けます</h4>
+	</section>
+	<!-- <section class="messageWrap" id="message">
+		<div class="inner">
+			<div class="messageBg">
+				<h2 class="messageTitle" id="content">牛の健康管理と生産性の<br>向上を目指して─。</h2>
+				<div class="messageTxt">
+				<p>私たちは“治療から予防”を目指し、牛の健康管理と生産性の向上を生業とする獣医師による酪農コンサルタント会社です。</p>
+				<p class="pdT40">私たちは最高の知識とスキルを習得するため、常に挑戦し続け、酪農家とともに歩み続けます。そして私たちの仕事の成果はお客様とその牛群の成功ある姿だと考えます。<br>
+				また、酪農業界や獣医学にも貢献できる会社になりたいと思っています。</p>
+				</div>
+				<p class="messageImg fadeUp pActive"><img src="./assets/img/shine500.jpg" alt=""></p>
+			</div>
+		</div>
+	</section> -->
+<div class="flex" style="margin-top: 10vh;">
+	<div class="flex-menu1">
+		<a href="./about.html" class="zoom-with-text-link">社長メッセージ</a>
+		<img class="zoom-with-text-photo" src="./assets/img/photo_msg02.png">
+	</div>
+	<div class="flex-menu1">
+		<a href="#" class="zoom-with-text-link">会社情報</a>
+		<img class="zoom-with-text-photo" src="./assets/img/IMG_6837.jpg">
+	</div>
+	<div class="flex-menu1">
+		<a href="#" class="zoom-with-text-link">採用情報</a>
+		<img class="zoom-with-text-photo" src="./assets/img/IMG_6788.jpg">
+	</div>
+	<div class="flex-menu2"><img class="hover-zoom object-fit" src="./assets/img/IMG_6826.jpg"></div>
+</div>
+
 		<!-- <ul class="grid">
 			<li>
 				<img style="width: 100%;" src="./assets/img/wrapper-img.jpg" >
@@ -68,7 +125,7 @@
 				<h4>採用情報</h4>
 			</li>
 		</ul> -->
-		<ul class="cards">
+		<!-- <ul class="cards">
 			<li class="cards__item">
 				<div class="card">
 					<a href="#">
@@ -101,7 +158,7 @@
 			</li>
 		</ul>
 	</section>
-	
+	 -->
 
 	<!-- <section class="features">
 		<h3 class="title">Features and services</h3>
@@ -161,7 +218,12 @@
 			<p>tel.086-728-2677</p>
 		</div>
 	</footer>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	
 	<script src="assets/js/hamburgers.js" async=""></script>
+	<script>
+		objectFitImages('img.object-fit');
+	</script>
 
 </body>
 
