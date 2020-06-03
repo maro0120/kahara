@@ -11,10 +11,13 @@
 html{
 	font-family: dnp-shuei-4go-std, sans-serif;
 	color: #555;
-}
-html{
 	font-size: 62.5%;
+	visibility: hidden;
 }
+html.wf-active {
+  visibility: visible;
+}
+
 body{
 	font-size:1.6rem;/* 16px*/
 	line-height: 2;
@@ -690,9 +693,21 @@ header nav li:last-child{
 	animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
 }
 .flex-photo{
+	opacity: 0;
 	flex-basis: 40%;
 	padding:2vh;
 	padding-top: 10vh;
+	animation: photo 1.0s ease-out 0.3s 1 forwards;
+}
+@keyframes photo {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 20px, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
 }
 .flex-message h2{
 	position: absolute;
@@ -758,11 +773,31 @@ div .message{
 	padding: 5vh;
 }
 
-@media (max-width: 640px) {
-
+h2.line {
+  position: relative;
+  display: inline-block;
+  padding: 0 15vw;
 }
+
+h2.line:before, h2.line:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 13vw;
+  height: 0.5px;
+  background-color: black;
+}
+
+h2.line:before {
+  left:0;
+}
+h2.line:after {
+  right: 0;
+}
+
 .flex-menu1{
-	flex-basis: 33.3333%;
+	flex-basis: 50%;
 	overflow:hidden;
 	background: #080808;
 	position: relative;
@@ -849,8 +884,6 @@ div .message{
 
 .object-fit-pd{
 	object-fit: cover;
-
-
 	width: 100%;
 	font-family: 'object-fit: cover;'
 }
