@@ -598,7 +598,7 @@ header nav li:last-child{
 	top: 0;
 	left: 0;
 	justify-content: center;
-	height: 10vh;
+	height: 80vh;
 	color: #fff;
 	text-align: center;
 }
@@ -610,11 +610,13 @@ header nav li:last-child{
 	width: 100%;
 	height: 100%;
 	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-color: #2196F3;
 	z-index: -1;
 }
 
-.hero_small .background-image:after{
+.hero_small .background-image:before{
 	content: '';
 	position: absolute;
 	top: 0;
@@ -624,7 +626,7 @@ header nav li:last-child{
 	background-color: #414a4f;
 	opacity: 0.5;
 }
-.hero_small .background-image:before {
+/* .hero_small .background-image:before {
 	content: '';
 	width: 100%;
 	height: 46px;
@@ -633,7 +635,17 @@ header nav li:last-child{
 	left: 0;
 	bottom: 0;
 	z-index: 2;
-}
+} */
+/* .hero_small .background-image:after {
+	content: '';
+	position: absolute;
+	left: 0;
+  width: 100%;
+	height: 10vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(0deg, white 0%, rgba(255, 255, 255, 0) 100%);
+  bottom: 0;
+} */
 
 .hero_small h1{
 	margin-top: 5vh;
@@ -653,9 +665,7 @@ header nav li:last-child{
 	}
 
 
-.hero_small .background-image:before {
-	height: 25px;
-}
+
 
 }
 
@@ -687,19 +697,6 @@ header nav li:last-child{
 	flex-basis: 55%;
 	margin: 1em 1em;
 	padding: 1em 2em;
-	background-repeat: no-repeat;
-	background-image:	 linear-gradient(to right, #080808 100%, #080808 100%),
-						linear-gradient(to bottom, #080808 100%, #080808 100%),
-						linear-gradient(to right, #080808 100%, #080808 100%),
-						linear-gradient(to bottom, #080808 100%, #080808 100%);
-	background-size:	100% 1px,
-						1px 100%,
-						100% 1px,
-						1px 100%;
-	background-position:	0 0,
-							100% 0,
-							100% 100%,
-							0 100%;
 	animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
 }
 .flex-photo{
@@ -784,7 +781,11 @@ div .message{
 }
 
 .container {
-	margin: 0 auto;
+	margin: 10vh 5vw;
+}
+
+.container-float {
+	margin: 10vh auto;
 	width: 1000px;
 }
 
@@ -796,26 +797,7 @@ div .message{
 	flex-wrap: nowrap;
 	padding: 5vh 5vw;
 }
-.flex-item-image {
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	width: 50vw;
-	flex: 1 1 0;
-	object-fit: cover;
-	text-align: right;
-}
-.flex-item-text {
-	position: relative;
-	z-index: 2;
-	margin-top: 10vh;
-	flex-basis: 50%;
-	margin: 5vh;
-	background-color: #fff;
-	justify-content: left;
-	align-content: center;
-	align-items: center;
-}
+
 .flex-item-image-right {
 	width: 50vw;
 	flex: 1 1 0;
@@ -831,32 +813,76 @@ div .message{
 }
 
 
-.flex-photo-left {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	position: relative;
-}
-.flex-photo-left:before {
-	content: "";
-	position: absolute;
-	width: calc(50vw + 80px);
-	height: 60vh;
-	background-position: center top;
-	background-size: contain;
-	background-repeat: no-repeat;
-	left: 0px;
-	top: 0px;
-	border-radius: 0 10px 10px 0;
-	z-index: 0;
-}
-.flex-photo-left.ceo:before {
-	background-image: url(../img/kahara.png);
-}
-.flex-photo-left-text {
+.flex-product-photo {
 	flex-basis: 60%;
-	z-index: 1;
+	align-items: center;
+	margin: 10vh 0;
+	opacity: 0;
 }
+.anime-under {
+	animation: under-to-top 1.0s ease-out 0.3s 1 forwards;
+}
+
+.flex-product-text {
+	flex-basis: 40%;
+	padding: 20px;
+	/* margin: 5vh; */
+	opacity: 0;
+}
+.flex-product-text h2 {
+	margin-bottom:5vh;
+}
+.anime-right{
+	animation: right-to-left 1.0s ease-out 0.3s 1 forwards;
+}
+.anime-left{
+	animation: left-to-right 1.0s ease-out 0.3s 1 forwards;
+}
+
+@keyframes under-to-top {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 20px, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes right-to-left {
+	0% {
+		opacity: 0;
+		transform: translate3d(20px, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes left-to-right {
+	0% {
+		opacity: 0;
+		transform: translate3d(-20px, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	.flex-product-photo {
+		flex-basis: 80%;
+		order: 1;
+	}
+	.flex-product-text {
+		flex-basis: 80%;
+		order: 2;
+	}
+}
+
 
 .clearfix:after {
 	content: "";
@@ -945,7 +971,14 @@ div .message{
 .product-box .product-text-inner p {
 	line-height:2em;
 }
-
+.product-photo {
+	transition: all .2s ease-in-out;
+	z-index: 1;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	font-family: 'object-fit: cover;';
+}
 .button-area {
 	width: 90%;
 	margin: 1em 0 0 auto;
@@ -1019,7 +1052,7 @@ a.btn-svg span {
 
 
 @media screen and (max-width: 768px){
-	.container {
+	.container-float {
 		width: 90%;
 		margin: 0 auto;
 	}
@@ -1065,10 +1098,28 @@ a.btn-svg span {
 
 .flex-center{
 	display: flex;
+	align-content: space-around;
+	justify-content: space-around;
+	/* align-items: center; */
+	flex-wrap: wrap;
+	margin: 10vh 0;
+}
+.flex-align-center{
+	display: flex;
 	align-content: center;
 	justify-content: center;
-	flex-wrap: wrap
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 10vh 0;
 }
+@media (max-width: 640px){
+	.flex-center{
+		margin-top: 0;
+		margin-bottom: 5vh;
+	}
+}
+
+
 div .concept-box{
 	flex-basis: auto;
 	text-align: center;
@@ -1095,8 +1146,8 @@ div .concept-text{
 
 
 .flex-menu1{
-	flex-basis: 50%;
-	overflow:hidden;
+	flex-basis: 49.9%;
+	overflow: hidden;
 	background: #080808;
 	position: relative;
 }
@@ -1137,23 +1188,19 @@ div .concept-text{
 	z-index: 2;
 }
 .zoom-with-text-photo {
-	/* display: block;
-	left: 0;
-	position: absolute;
-	top: 0; */
 	transition: all .2s ease-in-out;
 	z-index: 1;
 	object-fit: cover;
 	height: 100%;
 	width: 100%;
-	font-family: 'object-fit: cover;'
+	font-family: 'object-fit: cover;';
+	opacity: 0.6;
 }
 .zoom-with-text-link:hover {
 	text-shadow: 0 0 35px rgba(0,0,0,.4);
 }
 .zoom-with-text-link:hover +.zoom-with-text-photo {
 	transform: scale3d(1.1,1.1,1); /* hover時の倍率を指定 */
-	opacity: 0.6;
 }
 
 .flex-menu2{
@@ -1210,6 +1257,19 @@ div .concept-text{
 	}
 
 }
+
+
+.info td, .info th  {
+	vertical-align: 0;
+	border-color: #eaeaea;
+	border-style: solid;
+	border-width: 1px 0;
+	padding: 1em;
+}
+.info th  {
+	white-space: nowrap;
+}
+
 /*--------------------
  	Our Work Section
 ---------------------*/
