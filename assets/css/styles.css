@@ -1120,8 +1120,7 @@ a.btn-svg span {
 }
 @media (max-width: 640px){
 	.flex-center{
-		margin-top: 0;
-		margin-bottom: 5vh;
+		margin: 5vh 0;
 	}
 }
 
