@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<meta charset="utf-8">
-		<meta lang="ja">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>会社概要</title>
+	<meta charset="utf-8">
+	<meta lang="ja">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>会社概要</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -13,25 +13,40 @@
 	<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/styles.css">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.min.js"></script>
+	<script>
+		(function(d) {
+			var config = {
+				kitId: 'vdy7ayo',
+				scriptTimeout: 3000,
+				async: true
+			},
+			h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+		})(document);
+	</script>
+
 </head>
 
 <body>
 	<header class="site-header">
-		<a style="text-align: center;" href="./index.html"><img style="width: 70%;text-align: center;" src="./assets/img/logo_bl.svg" alt=""></a></h2>
-		<nav class="pc_nav" style="color: black;">
+		<a style="text-align: center;" href="./index.html"><img class="logo" src="./assets/img/logo_bl.svg" alt=""></a></h2>
+		<nav class="pc_nav">
 			<li><a href="./index.html">ホーム</a></li>
-			<li><a href="#">事業紹介</a></li>
+			<li><a href="./features.html">事業紹介</a></li>
 			<li><a href="./info.html">会社情報</a></li>
-			<li><a href="#">採用情報</a></li>
-			<li><a href="./contact.html">お問合せ</a></li>
+			<li><a href="./message.html">代表挨拶</a></li>
+			<li><a href="./recruit.html">採用情報</a></li>
+			<li><a href="#">お問合せ</a></li>
 		</nav>
 		<nav class="g_nav">
 			<ul class="g_nav_list">
-				<li class="g_nav_item"><a href="#home">ホーム</a></li>
-				<li class="g_nav_item"><a href="#features">事業紹介</a></li>
+				<li class="g_nav_item"><a href="./index.html">ホーム</a></li>
+				<li class="g_nav_item"><a href="./features.html">事業紹介</a></li>
 				<li class="g_nav_item"><a href="./info.html">会社情報</a></li>
-				<li class="g_nav_item"><a href="./info.html">採用情報</a></li>
-				<li class="g_nav_item"><a href="./contact.html">お問合せ</a></li>
+				<li class="g_nav_item"><a href="./message.html">代表挨拶</a></li>
+				<li class="g_nav_item"><a href="./recruit.html">採用情報</a></li>
+				<li class="g_nav_item"><a href="#">お問合せ</a></li>
 			</ul>
 		</nav>
 		<div class="h_menu" id="h_menu_js">
@@ -64,13 +79,6 @@
 
 
 	<footer>
-		<!-- <ul>
-			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-github-square""></i></a></li>
-		</ul> -->
 		<div>
 			<p><img style="width: 50%;" src="./assets/img/logo.svg" alt=""></p>
 			<p>〒709-3632</p>
@@ -79,6 +87,7 @@
 		</div>
 	</footer>
 	<script src="assets/js/hamburgers.js" async=""></script>
+	<script src="assets/js/ioHero.js" async=""></script>
 
 </body>
 
