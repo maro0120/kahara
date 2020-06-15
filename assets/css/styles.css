@@ -171,13 +171,13 @@ header{
 }
 
 .logo{
-	width: 70%;
+	width: 80%;
 	text-align: center;
 	fill: #fff;
 }
 
 .logo-black{
-	width: 70%;
+	width: 80%;
 	text-align: center;
 	fill: #080808;
 }
@@ -433,7 +433,7 @@ header nav li:last-child{
 	z-index:10;
 	opacity: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -511,7 +511,7 @@ header nav li:last-child{
 	padding-top: 120px;
 	position: absolute;
 	left: 0px;
-	top: 50px;
+	top: 80px;
 	z-index:998;
 }
 .titleWrap .title {
@@ -689,16 +689,15 @@ header nav li:last-child{
 
 .flex-message{
 	position: relative;
-	flex-basis: 55%;
+	flex-basis: 45%;
 	margin: 1em 1em;
-	padding: 1em 2em;
+	/* padding: 1em 2em; */
 	animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
 }
 .flex-photo{
 	opacity: 0;
-	flex-basis: 40%;
+	flex-basis: 45%;
 	padding:2vh;
-	padding-top: 10vh;
 	animation: photo 1.0s ease-out 0.3s 1 forwards;
 }
 @keyframes photo {
@@ -711,15 +710,7 @@ header nav li:last-child{
 		transform: translate3d(0, 0, 0);
 	}
 }
-.flex-message h2{
-	position: absolute;
-	top: 0;
-	left: -50px;
-	padding: 0 1em;
-	margin: 0;
-	background-color: white;
-	transform: translateY(-50%) translateX(1em);
-}
+
 
 @keyframes bg {
 	0% {
@@ -772,7 +763,7 @@ span.under {
 }
 
 div .message{
-	padding: 5vh;
+	padding: 5vh 0;
 }
 
 .container {
@@ -1243,7 +1234,6 @@ div .concept-text{
 	object-fit: cover;
 	width: 100%;
 	font-family: 'object-fit: cover;';
-	padding: 10px;
 }
 
 @media (max-width: 640px){
@@ -1281,6 +1271,18 @@ div .concept-text{
 .info th  {
 	white-space: nowrap;
 }
+
+.profile td, .profile th  {
+	vertical-align: 0;
+	border-color: #eaeaea;
+	border-style: none;
+	padding: 0.5em;
+}
+.profile th  {
+	white-space: nowrap;
+}
+
+
 
 /*--------------------
  	Our Work Section
