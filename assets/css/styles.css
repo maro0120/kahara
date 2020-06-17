@@ -782,26 +782,7 @@ div .concept-text{
 	font-family: 'object-fit: cover;';
 }
 
-@media (max-width: 640px){
 
-	.flex-menu1{
-		flex-basis: 100%;
-	}
-	.flex-message{
-		flex-basis: 100%;
-	}
-	.flex-photo{
-		flex-basis: 100%;
-		padding: 0;
-	}
-	.flex-message h2{
-		left: -30px;
-	}
-	div .message{
-		padding: 2vh 0 0 0;
-	}
-
-}
 
 /*-------------
  	message
@@ -842,7 +823,26 @@ div .concept-text{
 	}
 }
 
+@media (max-width: 640px){
 
+	.flex-menu1{
+		flex-basis: 100%;
+	}
+	.flex-message{
+		flex-basis: 100%;
+	}
+	.flex-photo{
+		flex-basis: 100%;
+		padding: 0;
+	}
+	.flex-message h2{
+		left: -30px;
+	}
+	div .message{
+		padding: 2vh 0 0 0;
+	}
+
+}
 
 /*-------------
  	features
