@@ -65,6 +65,8 @@ a{
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 a:hover{
@@ -237,6 +239,7 @@ header nav li:last-child{
 	text-decoration: none;
 	color: #080808;
 	font-size: 16px;
+	width: 120%;
 }
 .site-header .g_nav .g_nav_list .g_nav_item a:hover {
 	background-color: #eee;
@@ -661,16 +664,9 @@ header nav li:last-child{
 	justify-content: space-around;
 	/* align-items: center; */
 	flex-wrap: wrap;
-	margin: 10vh 0;
+	margin: 0;
 }
-.flex-align-center{
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	margin: 10vh 0;
-}
+
 @media (max-width: 640px){
 	.flex-center{
 		margin: 5vh 0;
@@ -681,6 +677,7 @@ header nav li:last-child{
 div .concept-box{
 	flex-basis: auto;
 	text-align: center;
+	margin: 10vh 0 0 0;
 }
 div .concept-box .concept-title{
 	position: relative;
@@ -699,7 +696,7 @@ div .concept-box .concept-title:after{
 div .concept-text{
 	flex-basis: 90%;
 	text-align: center;
-	margin-bottom: 10vh;
+	margin: 0 0 10vh 0;
 }
 
 
@@ -880,7 +877,7 @@ div .message{
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	margin: 10vh 0;
+	margin-top: 10vh;
 }
 
 .flex-product-photo {
