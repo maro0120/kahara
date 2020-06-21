@@ -61,6 +61,10 @@ ul, nav{
 	list-style: none;
 }
 
+table {
+	margin: 20px auto;
+}
+
 a{
 	text-decoration: none;
 	color: inherit;
@@ -866,11 +870,6 @@ div .message{
 	margin: 10vh 5vw;
 }
 
-.container-float {
-	margin: 10vh auto;
-	width: 1000px;
-}
-
 .flex-align-center {
 	display: flex;
 	align-content: center;
@@ -962,51 +961,6 @@ div .message{
 }
 
 
-.clearfix:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.clearfix:before {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.clearfix {
-	display: block;
-}
-
-.product-box {
-	position:relative;
-	margin-top:86px;
-	padding-bottom:10px;
-}
-
-
-.product-box .product-photo {
-	position:absolute;
-	width:68%;
-	z-index:1;
-	border-radius:10px;
-	overflow:hidden;
-	display:block;
-	top:0;
-}
-
-.product-box.left_photo .product-photo {
-	left:0;
-}
-
-.product-box.left_photo .product-photo a{
-	display:block;
-}
-
-.product-box.right_photo .product-photo {
-	right:0;
-}
-
 .product-photo img {
 	display:block;
 	width:100%;
@@ -1019,36 +973,6 @@ div .message{
 	transition-duration: 0.3s;
 }
 
-.product-box .product-text {
-	position:relative;
-	margin-top:10vh;
-	width:45%;
-	z-index:2;
-	box-shadow: 2px 2px 5px rgba(0,0,0,0.2); ;
-}
-
-.product-box.left_photo .product-text {
-	float:right;
-	margin-right:2vw;
-}
-
-.product-box.right_photo .product-text {
-	float:left;
-	margin-left:2vw;
-}
-
-.product-box .product-text-inner {
-	padding:30px;
-	background-color:#fff;
-}
-
-.product-box .product-text-inner h2 {
-	margin:0 0 0.8em 0;
-}
-
-.product-box .product-text-inner p {
-	line-height:2em;
-}
 
 .button-area {
 	width: 90%;
@@ -1122,45 +1046,7 @@ a.btn-svg span {
 
 
 
-@media screen and (max-width: 768px){
-	.product_selector a {
-		padding-bottom:0.5em;
-	}
 
-	.product-box {
-		margin-top:43px;
-	}
-
-	.product-box .product-text-inner {
-		padding:10px;
-	}
-
-	.product-box .product-photo {
-		position:relative;
-		width:90%;
-		height:auto;
-	}
-
-	.product-box.left_photo .product-photo {
-		float:left;
-	}
-
-	.product-box.right_photo .product-photo {
-		float:right;
-	}
-
-	.product-photo img {
-		width:100%;
-		height:auto;
-	}
-
-	.product-box .product-text {
-		margin-top:-20px;
-		width:90%;
-	}
-
-
-}
 
 /*-------------
  	info
@@ -1187,199 +1073,6 @@ a.btn-svg span {
 .profile th  {
 	white-space: nowrap;
 }
-
-
-
-/*--------------------
- 	Our Work Section
----------------------*/
-
-.our-work{
-	background-color: #fff;
-}
-
-.our-work .grid li{
-	padding: 30px 30px;
-	flex-basis: 30%;
-	text-align: center;
-}
-
-.our-work .grid li i{
-	font-size: 50px;
-	color: #2196F3;
-	margin-bottom: 25px;
-}
-
-.our-work .grid li h4{
-	color: #555;
-	font-size: 20px;
-	margin-bottom: 25px;
-}
-
-.our-work .grid li p{
-	margin: 0;
-}
-
-@media (max-width: 1000px){
-
-	.our-work .grid li{
-		flex-basis: 70%;
-		margin-bottom: 65px;
-	}
-
-	.our-work .grid li:last-child{
-		margin-bottom: 0;
-	}
-
-}
-
-
-@media (max-width: 640px){
-
-	.our-work .grid li{
-		flex-basis: 100%;
-	}
-
-}
-
-.our-work img {
-	height: auto;
-	max-width: 100%;
-	vertical-align: middle;
-}
-
-.cards {
-	display: -webkit-box;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	justify-content: center;
-}
-.cards__item {
-	display: -webkit-box;
-	display: flex;
-	padding: 1rem;
-	width: 33.3333%;
-}
-
-.card {
-	background-color: white;
-	border-radius: 0.25rem;
-	box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-	display: -webkit-box;
-	display: flex;
-	width: 100%;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-			flex-direction: column;
-	overflow: hidden;
-}
-.card:hover .card__image {
-	-webkit-filter: contrast(100%);
-			filter: contrast(100%);
-}
-.card__content {
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-flex: 1;
-			flex: 1 1 auto;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-			flex-direction: column;
-	padding: 1rem;
-}
-.card__image {
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-top-left-radius: 0.25rem;
-	border-top-right-radius: 0.25rem;
-	-webkit-filter: contrast(70%);
-			filter: contrast(70%);
-	overflow: hidden;
-	position: relative;
-	-webkit-transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-	transition: -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-	transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-	transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91), -webkit-filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
-}
-.card__image::before {
-	content: "";
-	display: block;
-	padding-top: 56.25%;
-}
-@media (min-width: 40rem) {
-	.card__image::before {
-	padding-top: 66.6%;
-	}
-}
-.card__image--mb {
-	background-image: url("../img/mb500.jpg");
-}
-.card__image--se {
-	background-image: url("../img/se500.jpg");
-}
-.card__image--st {
-	background-image: url("../img/st500.jpg");
-}
-.card__image--fence {
-	background-image: url(https://unsplash.it/800/600?image=59);
-}
-.card__title {
-	color: #696969;
-	font-size: 1.25rem;
-	font-weight: 300;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-}
-.card__text {
-	-webkit-box-flex: 1;
-			flex: 1 1 auto;
-	font-size: 0.875rem;
-	line-height: 1.5;
-	margin-bottom: 1.25rem;
-}
-
-@media (max-width: 900px){
-	.cards__item {
-		width: 100%;
-	}
-}
-
-table {
-	margin: 20px auto;
-}
-.tbl-r02 th {
-	background: #c2c2c2;
-	border: solid 1px #c2c2c2;
-	padding: 10px;
-	text-align: left;
-}
-.tbl-r02 td {
-	background: #f0f0f0;
-	border: solid 1px #f0f0f0;
-	padding: 10px;
-}
-
-@media (max-width: 640px) {
-	.last td:last-child {
-	border-bottom: solid 1px #ccc;
-	width: 100%;
-	}
-	.tbl-r02 {
-	width: 80%;
-	}
-	.tbl-r02 th,
-	.tbl-r02 td {
-	border-bottom: none;
-	display: block;
-	width: 100%;
-	}
-}
-
 
 /*----------------------
  	Features Section
@@ -1510,8 +1203,6 @@ table {
 
 }
 
-
-
 /*---------------------
  	Contact Section
 ---------------------*/
@@ -1567,9 +1258,6 @@ table {
 		margin: 0 0 20px 0;
 	}
 }
-
-
-
 
 /*-------------
  	Footer
@@ -1637,13 +1325,6 @@ footer .logo_footer{
 	footer .logo_footer{
 		width: 30%;
 	}
-}
-
-
-/* -- Demo ads -- */
-
-@media (max-width: 1200px) {
-	#bsaHolder{ display:none;}
 }
 
 
