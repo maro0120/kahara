@@ -12,17 +12,11 @@ html{
 	font-family: dnp-shuei-4go-std, sans-serif;
 	color: #555;
 	font-size: 62.5%;
+	visibility: hidden;
 }
-
-/* パソコンで見たときは"pc"のclassがついた画像が表示される */
-.imgBox_pc { display: block !important; }
-.imgBox_sp { display: none !important; }
-/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
-@media (max-width: 800px){
-.imgBox_pc { display: none !important; }
-.imgBox_sp { display: block !important; }
+html.wf-active {
+	visibility: visible;
 }
-
 
 body{
 	font-size:1.6rem;/* 16px*/
@@ -546,6 +540,14 @@ header nav li:last-child{
 	opacity: 0.5;
 }
 
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.imgBox_pc { display: block !important; }
+.imgBox_sp { display: none !important; }
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media (max-width: 800px){
+.imgBox_pc { display: none !important; }
+.imgBox_sp { display: block !important; }
+}
 
 .hero h1{
 	font: bold 60px dnp-shuei-4go-std, sans-serif;
