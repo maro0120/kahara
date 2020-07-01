@@ -12,10 +12,6 @@ html{
 	font-family: dnp-shuei-4go-std, sans-serif;
 	color: #555;
 	font-size: 62.5%;
-	visibility: hidden;
-}
-html.wf-active {
-	visibility: visible;
 }
 
 body{
