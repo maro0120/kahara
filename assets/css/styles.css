@@ -12,12 +12,13 @@ html{
 	font-family: dnp-shuei-4go-std, sans-serif;
 	color: #555;
 	font-size: 62.5%;
-	visibility: hidden;
 }
-html.wf-active {
+html.wf-active .site-header, html.wf-active .titleWrap {
 	visibility: visible;
 }
-
+html .titleWrap, html .site-header {
+	visibility: hidden;
+}
 body{
 	font-size:1.6rem;/* 16px*/
 	line-height: 2;
