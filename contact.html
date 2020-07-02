@@ -5,16 +5,13 @@
 	<meta lang="ja">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>会社概要</title>
+	<title>お問い合わせ | 加原農園</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/styles.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.min.js"></script>
+	<script src="https://sdk.form.run/js/v2/formrun.js"></script>
 	<script>
 		(function(d) {
 			var config = {
@@ -62,25 +59,51 @@
 		<div class="background-image" style="background-image: url(assets/img/imgbox_3_morning.jpg);"></div>
 		<h1>お問合せ</h1>
 	</section>
-
-	
-	<section class="contact">
-		<h3 class="title">お問合せ</h3>	
-		<hr>
-
-		<form>
-			<input type="text" placeholder="氏名">
-			<input type="email" placeholder="Email">
-			<textarea rows="10"  placeholder="お問合せ内容"></textarea>
-			<a href="#" class="btn">送信</a>
-		</form>
-		
-	</section>
-
+	<div class="contact container">
+		<div id="container">
+			<h2 style="text-align: center;">お問合せフォーム</h2>
+			<form class="formrun" action="https://form.run/api/v1/r/ttx8gslbye85vd1ttg5l2954" method="post" style="text-align: left;" id="contact_form">
+				<div class="name">
+					<label for="name"></label>
+					<input type="text" placeholder="お名前" name="name" id="name_input" required data-formrun-required>
+				</div>
+				<div class="email">
+					<label for="email"></label>
+					<input type="email" placeholder="メールアドレス" name="email" id="email_input" required data-formrun-type="email" data-formrun-required>
+				</div>
+				<div class="telephone">
+					<label for="name"></label>
+					<input type="text" placeholder="電話番号" name="telephone" id="telephone_input" required data-formrun-required>
+				</div>
+				<div class="subject">
+					<label for="subject"></label>
+					<select placeholder="件名"" name="subject" id="subject_input" required data-formrun-required>
+						<option disabled hidden selected>件名</option>
+						<option>注文に関するお問い合わせ</option>
+						<option>採用に関するお問い合わせ</option>
+						<option>その他お問い合わせ</option>
+					</select>
+				</div>
+				<div class="message">
+					<label for="message"></label>
+					<textarea name="message" placeholder="お問い合わせ内容" id="message_input" cols="30" rows="5" required data-formrun-required></textarea>
+				</div>
+				<div class="_formrun_gotcha">
+					<style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+					<label for="_formrun_gotcha">If you are a human, ignore this field</label>
+					<input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+				</div>
+				<div class="submit">
+					<button id="form_button" type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
+				</div>
+			</form><!-- // End form -->
+		</div><!-- // End #container -->
+	</div>
 
 	<footer>
 		<div>
 			<p><img style="width: 50%;" src="./assets/img/logo.svg" alt=""></p>
+			<p>株式会社 加原農園</p>
 			<p>〒709-3632</p>
 			<p>岡山県久米郡久米南町山手30-1</p>
 
