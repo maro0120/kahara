@@ -8,9 +8,8 @@
 	<title>お問い合わせ | 加原農園</title>
 
 	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="preload" href="assets/img/imgbox_3_morning.jpg" as="image">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.min.js"></script>
 	<script src="https://sdk.form.run/js/v2/formrun.js"></script>
 	<script>
 		(function(d) {
@@ -22,7 +21,7 @@
 			h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
 		})(document);
 	</script>
-
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -59,7 +58,7 @@
 		<div class="background-image" style="background-image: url(assets/img/imgbox_3_morning.jpg);"></div>
 		<h1>お問合せ</h1>
 	</section>
-	<div class="contact container">
+	<div class="contact container" style="margin-left: 5px; margin-right: 5px;">
 		<div id="container">
 			<h2 style="text-align: center;">お問合せフォーム</h2>
 			<form class="formrun" action="https://form.run/api/v1/r/ttx8gslbye85vd1ttg5l2954" method="post" style="text-align: left;" id="contact_form">
@@ -93,6 +92,7 @@
 					<label for="_formrun_gotcha">If you are a human, ignore this field</label>
 					<input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
 				</div>
+				<div class="g-recaptcha" data-sitekey="6LfDaKwZAAAAAJikG4ocR9nQaOKE2DO9X_HkfDjQ" style="margin-bottom:5vh; max-width: 300px;"></div>
 				<div class="submit">
 					<button id="form_button" type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
 				</div>
@@ -106,7 +106,7 @@
 			<p>株式会社 加原農園</p>
 			<p>〒709-3632</p>
 			<p>岡山県久米郡久米南町山手30-1</p>
-
+			<p>© 2020 kahara farm</p>
 		</div>
 	</footer>
 	<script src="assets/js/hamburgers.js" async=""></script>

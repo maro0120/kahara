@@ -12,13 +12,17 @@ html{
 	font-family: dnp-shuei-4go-std, sans-serif;
 	color: #555;
 	font-size: 62.5%;
-}
-html.wf-active .site-header, html.wf-active .titleWrap {
-	visibility: visible;
-}
-html .titleWrap, html .site-header {
 	visibility: hidden;
 }
+html.wf-active {
+	visibility: visible;
+}
+/* html.wf-active .site-header, html.wf-active .titleWrap {
+	visibility: visible;
+}
+html .titleWrap, html .site-header, html .h1 {
+	visibility: hidden;
+} */
 
 body{
 	font-size:1.6rem;/* 16px*/
@@ -56,7 +60,7 @@ h2 {
 	}
 	h2 {
 		font-size: 1.6rem;/* 16px*/
-		letter-spacing: .4rem;
+		letter-spacing: .2rem;
 	}
 }
 ul, nav{
@@ -310,6 +314,7 @@ header nav li:last-child{
 }
 .site-header .h_menu .menu_open .h_menu_line_2 {
 	width: 0;
+	height: 0;
 	left: 50%;
 }
 .site-header .h_menu .menu_open .h_menu_line_3 {
@@ -349,6 +354,7 @@ header nav li:last-child{
 }
 .menu_open .h_menu_line_2 {
 	width: 0 !important;
+	height: 0 !important;
 	left: 50% !important;
 	background-color: #080808 !important;
 }
@@ -357,9 +363,9 @@ header nav li:last-child{
 	top: 20px !important;
 	background-color: #080808 !important;
 }
-.menu_open p {
+/* .menu_open p {
 	color: #080808 !important;
-}
+} */
 
 @media (max-width: 900px){
 	.pc_nav {
@@ -959,6 +965,7 @@ div .message{
 	.flex-product-text {
 		flex-basis: 80%;
 		order: 2;
+		padding: 0;
 	}
 }
 
@@ -1166,10 +1173,12 @@ a.btn-svg span {
 	.reviews .grid h4{
 		flex-basis: 80%;
 		padding: 0px;
+		text-align: left;
 	}
 	.reviews .grid p{
 		flex-basis: 80%;
 		padding: 0px;
+		text-align: left;
 	}
 }
 
@@ -1291,7 +1300,7 @@ a.btn-svg span {
 }
 
 .contact form {
-  padding: 37.5px;
+  padding: 0;
   margin: 50px 0;
 }
 
@@ -1329,12 +1338,12 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
 }
 .contact .email {
 	float: none;
-	width: 60%;
+	width: 80%;
 }
 
 .contact .name {
 	float: none;
-	width: 60%;
+	width: 80%;
 }
 
 .contact select {
@@ -1353,7 +1362,7 @@ input[type='text']:focus, [type='email']:focus, textarea:focus {
 }
 
 .contact .telephone {
-  width: 60%;
+  width: 80%;
 }
 
 .contact textarea {
